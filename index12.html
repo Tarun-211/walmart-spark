@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop Cart</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="e:/fete 1/shop cart.jpg" alt="Shop Cart" id="logo-image">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#cart">Cart</a></li>
+                <li><a href="#payment">Payment</a></li>
+            </ul>
+        </nav>
+        <div class="search-bar">
+            <input type="text" placeholder="Search for products...">
+            <button>Search</button>
+        </div>
+    </header>
+
+    <div class="hero">
+        <div class="hero-content">
+            <h2>Welcome to Shop Cart</h2>
+            <p>Your one-stop shop for the best products</p>
+            <a href="#products" class="btn">Shop Now</a>
+        </div>
+    </div>
+
+    <main>
+        <section id="products">
+            <h2>Our Products</h2>
+            <div class="product-grid">
+                <div class="product">
+                    <img src="e:/fete 1/5star.jpg" alt="Product 1">
+                    <h3>5 star</h3>
+                    <p>$29.99</p>
+                    <button onclick="addToCart('5 star', 29.99)">Add to Cart</button>
+                </div>
+                <div class="product">
+                    <img src="e:/fete 1/kitkat.jpg" alt="Product 2">
+                    <h3>kit kat</h3>
+                    <p>$19.99</p>
+                    <button onclick="addToCart('kitkat', 19.99)">Add to Cart</button>
+                </div>
+                <div class="product">
+                    <img src="e:/fete 1/sev.jpg" alt="Product 3">
+                    <h3>sev</h3>
+                    <p>$39.99</p>
+                    <button onclick="addToCart('sev', 39.99)">Add to Cart</button>
+                </div>
+                <div class="product">
+                    <img src="e:/fete 1/Wlaya.jpg" alt="Product 4">
+                    <h3>lays</h3>
+                    <p>$49.99</p>
+                    <button onclick="addToCart('lays', 49.99)">Add to Cart</button>
+                </div>
+                <div class="product">
+                    <img src="e:/fete 1/Wrasana.jpg" alt="Product 5">
+                    <h3>Rasana</h3>
+                    <p>$59.99</p>
+                    <button onclick="addToCart('Rasana', 59.99)">Add to Cart</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <form id="contactForm">
+                <label for="name">Name:</label>
+                <input type="text" id="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" required>
+                <label for="message">Message:</label>
+                <textarea id="message" rows="4" required></textarea>
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+
+        <section id="cart">
+            <h2>Your Cart</h2>
+            <ul id="cart-items"></ul>
+            <button onclick="proceedToPayment()">Proceed to Payment</button>
+        </section>
+
+        <section id="payment">
+            <h2>Payment</h2>
+            <form id="paymentForm">
+                <label for="cardName">Name on Card:</label>
+                <input type="text" id="cardName" required>
+                <label for="cardNumber">Card Number:</label>
+                <input type="text" id="cardNumber" required>
+                <label for="expDate">Expiration Date:</label>
+                <input type="text" id="expDate" required>
+                <label for="cvv">CVV:</label>
+                <input type="text" id="cvv" required>
+                <button type="submit">Pay Now</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        &copy; 2024 Shop Cart. All rights reserved.
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
